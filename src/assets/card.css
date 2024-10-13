@@ -1,0 +1,134 @@
+.card {
+  min-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  border: 2px solid var(--color-gray-dark);
+  border-radius: 1.3rem;
+  background-color: var(--background-color-text-area-content);
+}
+
+/*Character count*/
+.character-count {
+  display: block;
+  width: 100%;
+  text-align: end;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-small);
+  color: var(--background-color-language-select);
+}
+
+/*Extra - Actions*/
+.extra {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-translate {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 28px;
+  border: 2px solid var(--background-color-button-hover);
+  border-radius: 12px;
+  background-color: var(--background-color-button-translate);
+  color: var(--color-text-main);
+  font-size: var(--font-size-big);
+  font-weight: var(--font-weight-big-medium);
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.buttons button {
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid var(--color-gray-dark);
+  padding: 4px;
+  border-radius: 8px;
+  transition: all 0.1s ease-out;
+}
+
+.buttons button:hover {
+  border-color: var(--color-gray-light);
+}
+.btn-translate:hover {
+  background-color: var(--background-color-button-hover);
+}
+
+.btn-translate:hover,
+.buttons button:hover {
+  transform: scale(0.9);
+}
+
+/*Text area*/
+.content {
+  background-color: transparent;
+  color: var(--color-text-main);
+  font-size: var(--font-size-big);
+  font-weight: var(--font-weight-big-medium);
+  border: none;
+  width: 100%;
+  height: 8rem;
+  resize: none;
+  outline: none;
+}
+
+.content:focus {
+  border: none;
+}
+
+.content:active {
+  border: none;
+}
+
+/*Buttons select Language*/
+
+ul.options,
+ul.buttons {
+  list-style: none;
+}
+
+.options {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-big-medium);
+  padding: 8px 0 20px 8px;
+  border-bottom: 2px solid var(--color-gray-dark);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.btn-language {
+  position: relative;
+  background-color: transparent;
+  color: var(--color-gray-light);
+  border-radius: 16px;
+  padding: 0.6rem 0.8rem;
+  transition: background-color 0.3s ease;
+}
+
+.options input[type='radio'] {
+  cursor: pointer !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+}
+
+.btn-language:has(input:checked) {
+  background-color: var(--color-gray-dark);
+}
